@@ -1,0 +1,22 @@
+# ===== MAVEN =====
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== INTELLIJ IDEA =====
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ===== LOGS =====
+*.log
+
+# ===== OS =====
+.DS_Store
+
+# ===== OTHER IDEs (optionnel) =====
+.vscode/
+.classpath
+.project
+.settings/
+build/
