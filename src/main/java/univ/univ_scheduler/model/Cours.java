@@ -1,29 +1,25 @@
 package univ.univ_scheduler.model;
 
 public class Cours {
-    private int id;
     private String matiere;
-    private Integer enseignantId;
+    private String enseignant;
     private String classe;
     private String groupe;
+    private String jour;
+    private String heureDebut;
+    private int duree;  // Durée en minutes
 
-    public Cours(int id, String matiere, Integer enseignantId, String classe, String groupe) {
-        this.id = id;
+    public Cours(String matiere, String enseignant, String classe, String groupe, String jour, String heureDebut, int duree) {
         this.matiere = matiere;
-        this.enseignantId = enseignantId;
+        this.enseignant = enseignant;
         this.classe = classe;
         this.groupe = groupe;
+        this.jour = jour;
+        this.heureDebut = heureDebut;
+        this.duree = duree;
     }
 
     // Getters et Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getMatiere() {
         return matiere;
     }
@@ -32,12 +28,12 @@ public class Cours {
         this.matiere = matiere;
     }
 
-    public Integer getEnseignantId() {
-        return enseignantId;
+    public String getEnseignant() {
+        return enseignant;
     }
 
-    public void setEnseignantId(Integer enseignantId) {
-        this.enseignantId = enseignantId;
+    public void setEnseignant(String enseignant) {
+        this.enseignant = enseignant;
     }
 
     public String getClasse() {
@@ -54,5 +50,35 @@ public class Cours {
 
     public void setGroupe(String groupe) {
         this.groupe = groupe;
+    }
+
+    public String getJour() {
+        return jour;
+    }
+
+    public void setJour(String jour) {
+        this.jour = jour;
+    }
+
+    public String getHeureDebut() {
+        return heureDebut;
+    }
+
+    public void setHeureDebut(String heureDebut) {
+        this.heureDebut = heureDebut;
+    }
+
+    public int getDuree() {
+        return duree;
+    }
+
+    public void setDuree(int duree) {
+        this.duree = duree;
+    }
+
+    @Override
+    public String toString() {
+        return "Cours: " + matiere + ", Enseignant: " + enseignant + ", Classe: " + classe + ", Groupe: " + groupe +
+                ", Jour: " + jour + ", Heure de début: " + heureDebut + ", Durée: " + duree + " minutes";
     }
 }
